@@ -1,0 +1,26 @@
+﻿@page
+@{
+    var client = new HttpClient();
+    var response = await client.GetAsync("https://kart.bergen.kommune.no/arcgis/rest/services/?f=pjson");
+
+    if (response.IsSuccessStatusCode) //Skriver ut i konsoll
+    {
+        Console.WriteLine(await response.Content.ReadAsStringAsync());
+        Console.WriteLine(response);
+    }
+}
+
+<html>
+<head>
+    <title>Maps</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Bergen maps</h1>
+        <h2>Bergen Maps!</h2>
+        <img class="bergenMap" src="~/images/kartBergen.png" />
+        
+    </div>
+    @Html.Raw(await response.Content.ReadAsStringAsync());
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿@model GISApp.Models.Accounts
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-colum" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                        {
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td style="text-decoration:underline" id="loginText">Login</td>
+                                </tr>
+
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.UserName)</td>
+                                    <td>@Html.EditorFor(model => model.UserName)</td>
+                                </tr>
+
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.Password)</td>
+                                    <td>@Html.EditorFor(model => model.Password)</td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" name="submit" value="Submit" />
+                                        <input type="reset" name="name" value="Clear" />
+                                    </td>
+                                </tr>
+                            </table>
+                        }
+                        </>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

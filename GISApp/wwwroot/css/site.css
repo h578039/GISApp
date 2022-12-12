@@ -1,0 +1,66 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    background-color: #202020;
+    height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    position: relative;
+    border: none;
+    min-height: 100%;
+    background-color: grey;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#text {
+    font-size: 250%;
+}
+
+#bilderamme {
+    width: 550px;
+    height: 312px;
+    border: 1px solid dimgray;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+#imgBergen {
+    cursor: zoom-in; /*Forstørrelsesglass*/
+    width: 550px;
+}
+
+#loginText {
+    font-size: 250%;
+}
+
+div {
+    background-color: silver;
+}
+
+button {
+    background-color: white;
+    color: black;
+    width: auto;
+    opacity: 0.9;
+    border: none;
+    cursor: pointer;
+    padding: 1% 2%;
+    font-size: 40%;
+    margin: 2px;
+}
+
+    button:hover {
+        opacity: 1;
+    }
